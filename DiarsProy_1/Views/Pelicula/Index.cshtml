@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<br />
+<hr />
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <a  class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" href="/Pelicula/Guardar">Agregar Pelicula</a>
+            <a class="btn btn-primary" href="/Director/Guardar">Agregar Director</a>
+            <a class="btn btn-primary"  href="/Director/Index">Lista de directores</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>Nombre Pelicula</td>
+                        <td>Año de la pelicula</td>
+                        <td>Director</td>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var pelicula in Model)
+                    {
+                        <tr>
+                            <td>@pelicula.NombrePelicula</td>
+                            <td>@pelicula.Año</td>
+                            <td>@pelicula.Director.Nombre</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+@*<div class="container">
+        <h2>Lista de Peliculas</h2>
+        <br />
+        <div class="row">
+            <div class="col-6">
+                <a class="btn btn-primary" href="/Pelicula/Guardar">Agregar Pelicular</a>
+                <a class="btn btn-primary" href="#">Agregar Director</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td><h3>Pelicula</h3></td>
+                            <td><h3>Año</h3></td>
+                            <td><h3>Director</h3></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var pelicula in Model)
+                        {
+                            <tr>
+                                <td><h4>@pelicula.NombrePelicula</h4></td>
+                                <td><h4>@pelicula.Año</h4></td>
+                                <td><h4>@pelicula.Director.Nombre @pelicula.Director.Apellidos</h4></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>*@
+

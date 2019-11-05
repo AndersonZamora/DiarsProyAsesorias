@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Guardar";
+}
+
+<h2>Guardar Director</h2>
+
+<form method="post" action="/Director/DirectorGuardar">
+    <h4>Nombre</h4>
+    <h4><strong style="color:red">@Html.ValidationMessage("Nombre")</strong></h4>
+    <input class="form-control" name="Nombre" />
+
+    <h4>Apellidos</h4>
+    <input class="form-control" name="Apellidos" />
+
+    <button type="submit">Guardar</button>
+</form>
+<br />
+
